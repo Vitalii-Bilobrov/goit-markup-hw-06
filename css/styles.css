@@ -700,7 +700,6 @@ address .tel {
   top: 8px;
   right: 8px;
   padding: 0;
-  margin: 0;
 
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
@@ -716,7 +715,7 @@ address .tel {
 .modal-button:hover {
   color: var(--color-mainBlue);
 }
-.modal b {
+.modal-title {
   display: block;
   text-align: center;
   margin-bottom: 12px;
@@ -724,19 +723,19 @@ address .tel {
   font-size: 20px;
   line-height: 1.15em;
   font-weight: 700;
-  letter-spacing: 0.03em;
 }
 .modal form {
   display: flex;
   flex-direction: column;
 }
-.modal > form > label {
+.modal label {
+  position: relative;
   display: flex;
   flex-direction: column;
-  height: 58px;
-
+  
   margin-bottom: 10px;
 
+  height: 58px;
   font-size: 12px;
   line-height: 1.17em;
   letter-spacing: 0.01em;
@@ -745,6 +744,7 @@ address .tel {
 .modal-input {
   display: block;
   height: 40px;
+  width: 100%;
   padding-left: 42px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
@@ -767,6 +767,7 @@ address .tel {
   height: 120px;
   padding: 12px 16px;
   margin: 0;
+  width: 100%;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -784,6 +785,7 @@ text:focus {
   text-decoration: underline;
 }
 .submit-button {
+  display: block;
   width: 200px;
   height: 50px;
   margin-left: auto;
@@ -795,10 +797,14 @@ text:focus {
   border-radius: 4px;
   background-color: var(--color-mainBlue);
   color: var(--color-mainWhite);
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  cursor: pointer;
 }
-label {
-  position: relative;
-}
+
 label span {
   margin-bottom: 4px;
 }
@@ -806,9 +812,8 @@ label span {
   position: absolute;
   width: 18px;
   height: 18px;
-  top: 65%;
-  left: 18px;
-  transform: translate(-50%, -50%);
+  bottom: 11px;
+  left: 12px;
 
   fill: var(--color-veryDark);
 }
@@ -833,11 +838,12 @@ label span {
   height: 15px;
   margin-bottom: 0;
   margin-right: 8px;
-  padding: 4px 2x 3px 3px;
-  border: 1px solid var(--color-veryDark);
-  border-radius: 1px;
+  border: 2px solid var(--color-veryDark);
+  border-radius: 2px;
 
-  transition: background-image 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color, background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .checkbox-text {
   margin-bottom: 0;
@@ -860,20 +866,13 @@ label span {
 #checkbox-original:checked + .checkbox-custom {
   background-color: var(--color-mainBlue);
   border-color: var(--color-mainBlue);
-  border-radius: 2px;
   background-image: url(../images/icon-check.svg);
-  fill: var(--color-mainWhite);
-  background-origin: border-box;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .email-input-block {
-  width: 570px;
-  height: 86px;
-  margin-left: 93px;
-  margin-top: auto;
-  margin-bottom: auto;
+  margin-left: auto;
 }
 .email-input-title {
   font-weight: 700;
@@ -882,6 +881,9 @@ label span {
   letter-spacing: 0.03em;
   margin-bottom: 20px;
   color: var(--color-mainWhite);
+}
+.footter-label {
+  margin-right: 12px;
 }
 .email-input-field {
   padding: 15px 16px;
@@ -918,7 +920,6 @@ label span {
   width: 24px;
   height: 24px;
   margin-left: 10px;
-  justify-content: center;
 }
 .email-input-block > div {
   display: flex;
@@ -928,8 +929,6 @@ label span {
 .email-input-block input {
   width: 358px;
   height: 50px;
-  margin-top: 20px;
-  margin-right: 12px;
 
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
