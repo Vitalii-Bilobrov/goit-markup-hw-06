@@ -847,6 +847,7 @@ address .tel {
   resize: none;
   height: 120px;
   padding: 12px 16px;
+  height: 138px;
   margin: 0;
   width: 100%;
 
@@ -877,10 +878,6 @@ address .tel {
   line-height: 1.88;
   letter-spacing: 0.06em;
   cursor: pointer;
-}
-.imput-block__window--comment {
-  height: 138px;
-  margin-bottom: 20px;
 }
 .checkbox-block {
   display: flex;
