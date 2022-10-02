@@ -506,61 +506,60 @@
   </svg>
 </button>
 </div>
-        <form>
+</form>
       </div>
     </footer>
 
    <!--MODAL WINDOW-->
 
    <div data-modal class="backdrop is-hidden">
-    <div class="modal">
-      <button data-modal-close type="button" class="modal-button">
-        <svg class="close-black-svg">
+    <div class="modal-window">
+      <button data-modal-close type="button" class="close-button">
+        <svg class="close-button__icon">
           <use href="./images/symbol-defs.svg#.iconclose-black-button"></use>
         </svg>
       </button>
+    
+     <form class="signup-form" name="signup_form" autocomplete="on" novalidate>
+      <p class="signup-form__title">Залиште свої дані, ми вам передзвонимо</p>
 
-      <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
-
-      <form name="signup_form" autocomplete="on" novalidate>
-
-        <label>
-          <span>Імя</span>
-        <input type="text" class="modal-input" name="user_name" />
-        <svg class="modal-icon">
+        <label class="imput-block">
+          <span class="imput-block__name" >Імя</span>
+        <input type="text" class="imput-block__window" name="user_name" />
+        <svg class="imput-block__icon">
           <use href="./images/icons.svg#icon-person-black-18dp-1">
           </use>
         </svg>
       </label>
 
-        <label>
-          <span>Телефон</span>
-        <input type="tel" class="modal-input" name="tel_number" />
-        <svg class="modal-icon">
+        <label class="imput-block">
+          <span class="imput-block__name">Телефон</span>
+        <input type="tel" class="imput-block__window" name="tel_number" />
+        <svg class="imput-block__icon">
           <use href="./images/icons.svg#icon-phone-black-18dp-1">
           </use>
         </svg>
       </label>
 
-        <label>
-          <span>Пошта</span>
-        <input type="email" class="modal-input" name="user_email" />
-        <svg class="modal-icon">
+        <label class="imput-block">
+          <span class="imput-block__name">Пошта</span>
+        <input type="email" class="imput-block__window" name="user_email" />
+        <svg class="imput-block__icon">
           <use href="./images/icons.svg#icon-email-black-18dp-1">
           </use>
         </svg>
       </label>
 
-        <label id="comment">
-          <span>Коментар</span>
-        <textarea id="text" name="text" ></textarea>
+        <label class="imput-block">
+          <span class="imput-block__name">Коментар</span>
+        <textarea class="imput-block__window imput-block__window--comment" name="text" placeholder="Введіть текст" ></textarea>
         </label>
 
-          <label id="checkbox-label">
-            <input id="checkbox-original" type="checkbox">
-            <span class="checkbox-custom"></span>
-            <span class="checkbox-text">Погоджуюся з розсилкою та приймаю
-            <a href="#" class="checkbox-contract-link">Умови договору</a></span>
+          <label class="checkbox-block">
+            <input class="checkbox-block__original" type="checkbox">
+            <span class="checkbox-block__special"></span>
+            <span class="checkbox-block__text">Погоджуюся з розсилкою та приймаю
+            <a href="#" class="checkbox-block__vector">Умови договору</a></span>
           </label>
 
         <button class="submit-button" type="submit">Відправити</button>
