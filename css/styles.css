@@ -803,6 +803,9 @@ address .tel {
 
   margin-bottom: 10px;
 }
+.imput-block:nth-child(5){
+  margin-bottom: 20px;
+}
 .imput-block__name {
   font-size: 12px;
   line-height: 1.17em;
@@ -835,8 +838,8 @@ address .tel {
 .imput-block__window:focus {
   border-color: var(--color-mainBlue);
 }
-.imput-block__window:hover .imput-block__icon,
-.imput-block__window:focus .imput-block__icon {
+.imput-block__window:hover + .imput-block__icon,
+.imput-block__window:focus + .imput-block__icon {
   fill: var(--color-mainBlue);
 }
 .imput-block__window--comment {
